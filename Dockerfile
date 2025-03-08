@@ -12,7 +12,8 @@ WORKDIR /app
 COPY go.mod ./
 
 # Download all the dependencies
-RUN go mod download
+RUN go mod init && go mod tidy
+
 
 # Copy the source code to the working directory
 COPY . .
