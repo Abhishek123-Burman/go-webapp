@@ -100,7 +100,7 @@ resource "aws_eks_node_group" "gowebapp" {
   cluster_name    = aws_eks_cluster.gowebapp.name
   node_group_name = "gowebapp-node-group"
   node_role_arn   = aws_iam_role.gowebapp_node_group_role.arn
-  subnet_ids      = aws_subnet.goweebapp_subnet[*].id
+  subnet_ids      = aws_subnet.gowebapp_subnet[*].id
 
   scaling_config {
     desired_size = 3
